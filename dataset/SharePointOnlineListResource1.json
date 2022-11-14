@@ -1,0 +1,51 @@
+{
+	"name": "SharePointOnlineListResource1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SharePointOnlineList1",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"site": {
+					"value": "@dataset().site",
+					"type": "Expression"
+				},
+				"tenant_id": {
+					"value": "@dataset().tenant_id",
+					"type": "Expression"
+				},
+				"service_principal_id": {
+					"value": "@dataset().service_principal_id",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"list": {
+				"type": "string",
+				"defaultValue": "@item().list"
+			},
+			"site": {
+				"type": "string",
+				"defaultValue": "@item().site"
+			},
+			"tenant_id": {
+				"type": "string",
+				"defaultValue": "@item().tenant_id"
+			},
+			"service_principal_id": {
+				"type": "string",
+				"defaultValue": "@item().service_principal_id"
+			}
+		},
+		"annotations": [],
+		"type": "SharePointOnlineListResource",
+		"schema": [],
+		"typeProperties": {
+			"listName": {
+				"value": "@dataset().list",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

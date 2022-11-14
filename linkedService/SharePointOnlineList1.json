@@ -1,0 +1,28 @@
+{
+	"name": "SharePointOnlineList1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"site": {
+				"type": "String",
+				"defaultValue": "https://paragonshift0.sharepoint.com/sites/wissamTest"
+			},
+			"tenant_id": {
+				"type": "String",
+				"defaultValue": "96d1021c-6dda-4c91-a49e-df8a7f11bdb0"
+			},
+			"service_principal_id": {
+				"type": "String",
+				"defaultValue": "95f682b9-a2e7-4529-84c7-f6342246cc0c"
+			}
+		},
+		"annotations": [],
+		"type": "SharePointOnlineList",
+		"typeProperties": {
+			"siteUrl": "@{linkedService().site}",
+			"tenantId": "@{linkedService().tenant_id}",
+			"servicePrincipalId": "@{linkedService().service_principal_id}",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDY3MzZBMTIwLTQ1QTgtNEFBOC05NEQ4LUM0OTcwRjVFOTI5Ql9lYmQxNTcxMS0xNWI0LTRjNTktYTZjYy1kMmFhMjViMGU1MTQiDQp9"
+		}
+	}
+}

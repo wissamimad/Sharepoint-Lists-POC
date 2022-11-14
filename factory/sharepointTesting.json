@@ -1,0 +1,9 @@
+{
+	"name": "sharepointTesting",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "1f761ef6-a8a9-4fc4-aa8b-a9b7b0ec81be",
+		"tenantId": "96d1021c-6dda-4c91-a49e-df8a7f11bdb0"
+	}
+}
